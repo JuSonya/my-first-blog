@@ -5,7 +5,7 @@ from django.utils import timezone
 class Tag(models.Model):
     name = models.CharField(max_length=50)
         
-    def __unicode__(self):
+    def __str__(self):
         return u'%s' % self.name
         
         
@@ -24,7 +24,7 @@ class Post(models.Model):
         self.published_date = timezone.now()
         self.save()
 
-    def __unicode__(self):
+    def __str__(self):
         return self.title
     
 

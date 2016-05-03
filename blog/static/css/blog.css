@@ -50,3 +50,10 @@
     .post h1 a, .post h1 a:visited {
         color: #000000;
     }
+    
+    .tag a{
+        color: #FF9400;
+        font-size: 14pt;
+        text-decoration: none;
+    }
+    

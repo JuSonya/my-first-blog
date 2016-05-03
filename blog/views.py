@@ -52,3 +52,9 @@ def post_edit(request, pk):
     else:
         form = PostForm(instance=post)
     return render(request, 'blog/post_edit.html', {'form': form})
+
+
+def post_tag(request, name):
+    posts = Post.objects.filter(published_date__lte=timezone.now(), tags__name=name)
+
+    return render(request, 'blog/post_list.html', {'posts': posts, 'tag': name})
