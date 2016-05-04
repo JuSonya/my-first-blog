@@ -53,7 +53,13 @@
     
     .tag a{
         color: #FF9400;
-        font-size: 14pt;
+        font-size: 10pt;
         text-decoration: none;
+    }
+    .link_post a{
+        color: #85808A;
+        font-size: 10pt;
+        text-decoration: underline;
+        
     }
     

@@ -10,7 +10,10 @@
                     {{ post.created_date }}
                 </div>
                 <h1><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h1>
-                <p>{{ post.text|safe|linebreaks|truncatewords_html:50 }}</p>
+                <p>{{ post.text|safe|linebreaks|truncatewords_html:20 }} </p>
+                    <div class='link_post'>
+                        <a href="{% url 'post_detail' pk=post.pk %}">Что было дальше →</a>
+                    </div>
                     <div class="tag">
                     {% for tag in post.tags.all %}
                         <a href="{% url 'post_tag' tag.name %}">{{ tag.name }}</a>{% if not forloop.last %},{% endif %}
