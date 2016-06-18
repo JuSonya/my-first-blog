@@ -2,7 +2,7 @@
     <html>
 
         <head>
-            <title>Как ель на подоконнике</title>       
+            <title>{% block title %}{% endblock %}Как ель на подоконнике</title>
             <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
             <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
             <link rel="stylesheet" href="{% static 'css/blog.css' %}">
@@ -16,6 +16,9 @@
                     <a href="{% url 'post_new' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a>
                 {% endif %}
                 <h1><a href="/">Как ель на подоконнике</a></h1>
+                <div class="epigraph">
+                    Хвойные заметки о нашей жизни в Грузии
+                </div>
             </div>
             <div class="content container">
                 <div class="row">

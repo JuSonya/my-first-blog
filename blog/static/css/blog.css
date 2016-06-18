@@ -62,4 +62,15 @@
         text-decoration: underline;
         
     }
-    
+
+    .page-header > * {
+        display: inline-table;
+        vertical-align: middle;
+    }
+
+    .epigraph {
+        color: #ffffff;
+        font-size: 14pt;
+        margin-top: 24px;
+        margin-left: 140px;
+    }
