@@ -1,5 +1,7 @@
 from django.db import models
 from django.utils import timezone
+from django.contrib.syndication.views import Feed
+from django.core.urlresolvers import reverse
 
 
 class Tag(models.Model):
@@ -26,6 +28,21 @@ class Post(models.Model):
 
     def __str__(self):
         return self.title
-    
 
-        
+
+class NewPostFeed(Feed):
+    title = "like a spruce on a windowsill"
+    link = '/blog/feed/'
+    description = 'Последние новости из Батумской квартиры'
+
+    def items(self):
+        return Post.objects.all()
+
+    def item_title(self, item):
+        return item.title
+    
+    def item_description(self, item):
+        return item.text[:160]
+
+    def item_link(self, item):
+        return reverse('post_detail', args=[item.pk])

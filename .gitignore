@@ -3,3 +3,4 @@ __pycache__
 juenv
 db.sqlite3
 .DS_Store
+*~
